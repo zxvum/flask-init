@@ -1,0 +1,21 @@
+{% extends "app.html" %}
+
+{% block content %}
+    <div class="container mx-auto flex items-center justify-center min-h-screen">
+        <form action="/login" method="post" class="bg-white p-10 w-96">
+            <p class="text-center text-2xl font-semibold">Sign in</p>
+            <div class="flex flex-col mt-4 gap-2">
+                <input name="email" type="email" placeholder="Email" class="w-full bg-gray-100 h-[54px] px-4">
+                <input name="password" type="password" placeholder="Password" class="w-full bg-gray-100 h-[54px] px-4">
+                <div class="form-check">
+                  <input name="remember_me" class=" h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" id="flexCheckDefault" type="checkbox" checked>
+                  <label class="form-check-label inline-block text-gray-800 cursor-pointer" for="flexCheckDefault">
+                    Remember me
+                  </label>
+                </div>
+                <button class="w-full h-[54px] mt-4 bg-green-400 text-white text-lg font-semibold hover:bg-green-600">Login</button>
+            </div>
+            <p class="text-center text-sm mt-2 text-gray-400">Not have an account? <a class="text-green-500 hover:text-green-700" href="/register">Register</a></p>
+        </form>
+    </div>
+{% endblock %}
